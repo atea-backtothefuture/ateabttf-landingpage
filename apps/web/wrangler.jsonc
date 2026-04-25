@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "atta-bttf-web",
+  "compatibility_date": "2026-04-25",
+  "pages_build_output_dir": "./dist",
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "PUBLIC_API_BASE_URL": "https://api.example.com"
+  }
+}

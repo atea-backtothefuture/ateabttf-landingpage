@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "atta-bttf-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-04-25",
+  "workers_dev": false,
+  "observability": {
+    "enabled": true
+  },
+  "routes": [
+    {
+      "pattern": "api.example.com/*",
+      "zone_name": "example.com"
+    }
+  ],
+  "vars": {
+    "APP_ENV": "production",
+    "CORS_ORIGIN": "https://atta-bttf-web.pages.dev"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "atta-bttf-volunteering",
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID",
+      "migrations_dir": "migrations"
+    }
+  ]
+}
