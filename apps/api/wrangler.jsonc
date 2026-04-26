@@ -10,7 +10,7 @@
   "routes": [
     {
       "pattern": "atta-bttf-api.ateabacktothefuture.workers.dev/*",
-      "zone_name": "ateabacktothefuture.workers.dev"
+      "zone_name": "workers.dev"
     }
   ],
   "vars": {
