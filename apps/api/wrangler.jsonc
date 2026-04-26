@@ -21,7 +21,7 @@
     {
       "binding": "DB",
       "database_name": "atta-bttf-volunteering",
-      "database_id": "REPLACE_WITH_D1_DATABASE_ID",
+      "database_id": "669739d0-f084-49fb-9f14-8add6fc2bfee",
       "migrations_dir": "migrations"
     }
   ]
