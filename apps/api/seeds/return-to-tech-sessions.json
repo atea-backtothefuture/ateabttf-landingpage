@@ -1,0 +1,386 @@
+[
+  {
+    "id": "session-01-returning-to-tech-with-confidence",
+    "slug": "returning-to-tech-with-confidence",
+    "title": "Returning to Tech With Confidence",
+    "summary": "Rebuild confidence, set realistic goals, and understand the current hiring landscape for returners in IT.",
+    "description": "Kick off the program by naming your strengths, reframing the career break, and setting a realistic plan for the next eight weeks.",
+    "plannedDate": "2026-09-10T18:30:00-04:00",
+    "plannedEndDate": "2026-09-10T20:00:00-04:00",
+    "speakerName": "Amina Okafor",
+    "speakerBio": "Career returnship mentor and former IT program manager focused on helping women re-enter technology roles after a break.",
+    "meetingLink": "https://program.atea-bttf.org/sessions/returning-to-tech-with-confidence",
+    "status": "open",
+    "skillLevel": "beginner",
+    "agenda": [
+      {
+        "id": "agenda-01-01",
+        "sortOrder": 1,
+        "title": "Welcome and participant introductions",
+        "details": "Set expectations, share goals, and create a supportive cohort dynamic for the eight-session journey."
+      },
+      {
+        "id": "agenda-01-02",
+        "sortOrder": 2,
+        "title": "Common return-to-work barriers in tech",
+        "details": "Discuss confidence gaps, changing tools, and how to reframe the career break in a strengths-based way."
+      },
+      {
+        "id": "agenda-01-03",
+        "sortOrder": 3,
+        "title": "Goal-setting for the 8-session journey",
+        "details": "Choose one target role and define simple weekly actions that can be sustained alongside existing commitments."
+      }
+    ],
+    "resources": [
+      {
+        "id": "resource-01-01",
+        "label": "Confidence reset worksheet",
+        "url": "https://program.atea-bttf.org/resources/confidence-reset-worksheet",
+        "resourceType": "worksheet"
+      },
+      {
+        "id": "resource-01-02",
+        "label": "Hiring landscape snapshot",
+        "url": "https://program.atea-bttf.org/resources/hiring-landscape-snapshot",
+        "resourceType": "guide"
+      }
+    ]
+  },
+  {
+    "id": "session-02-resume-refresh-for-it-roles",
+    "slug": "resume-refresh-for-it-roles",
+    "title": "Resume Refresh for IT Roles",
+    "summary": "Learn how to structure a resume for today's IT roles, including ATS-style formatting and stronger bullet writing.",
+    "description": "Translate earlier experience into modern IT language and leave with a resume draft targeted to a realistic role family.",
+    "plannedDate": "2026-09-17T18:30:00-04:00",
+    "plannedEndDate": "2026-09-17T20:00:00-04:00",
+    "speakerName": "Danielle Brooks",
+    "speakerBio": "Technical recruiter and resume coach who partners with returners on positioning transferable skills for analyst, QA, and support roles.",
+    "meetingLink": "https://program.atea-bttf.org/sessions/resume-refresh-for-it-roles",
+    "status": "planned",
+    "skillLevel": "beginner",
+    "agenda": [
+      {
+        "id": "agenda-02-01",
+        "sortOrder": 1,
+        "title": "Resume layout and ATS-style basics",
+        "details": "Review formatting choices that improve readability for recruiters and applicant tracking systems."
+      },
+      {
+        "id": "agenda-02-02",
+        "sortOrder": 2,
+        "title": "Writing impact-focused experience bullets",
+        "details": "Convert past responsibilities into stronger accomplishment statements with clear actions and outcomes."
+      },
+      {
+        "id": "agenda-02-03",
+        "sortOrder": 3,
+        "title": "Tailoring resumes for target job roles",
+        "details": "Align summary, keywords, and selected achievements with the role family chosen in session one."
+      }
+    ],
+    "resources": [
+      {
+        "id": "resource-02-01",
+        "label": "ATS resume template",
+        "url": "https://program.atea-bttf.org/resources/ats-resume-template",
+        "resourceType": "template"
+      },
+      {
+        "id": "resource-02-02",
+        "label": "Impact bullet workbook",
+        "url": "https://program.atea-bttf.org/resources/impact-bullet-workbook",
+        "resourceType": "worksheet"
+      }
+    ]
+  },
+  {
+    "id": "session-03-linkedin-and-personal-branding",
+    "slug": "linkedin-and-personal-branding",
+    "title": "LinkedIn and Personal Branding",
+    "summary": "Refresh your professional story online and present a confident, current profile to recruiters and hiring managers.",
+    "description": "Update your digital presence with a stronger headline, a clear summary, and a light-touch visibility plan you can maintain weekly.",
+    "plannedDate": "2026-09-24T18:30:00-04:00",
+    "plannedEndDate": "2026-09-24T20:00:00-04:00",
+    "speakerName": "Priya Raman",
+    "speakerBio": "Brand strategist and LinkedIn trainer who helps mid-career professionals restart their job search with clarity and confidence.",
+    "meetingLink": "https://program.atea-bttf.org/sessions/linkedin-and-personal-branding",
+    "status": "planned",
+    "skillLevel": "beginner",
+    "agenda": [
+      {
+        "id": "agenda-03-01",
+        "sortOrder": 1,
+        "title": "LinkedIn headline and summary refresh",
+        "details": "Draft a modern profile headline and About section that connect prior experience with current goals."
+      },
+      {
+        "id": "agenda-03-02",
+        "sortOrder": 2,
+        "title": "Showing career breaks with clarity and confidence",
+        "details": "Use honest, concise language that explains the break without diminishing professional value."
+      },
+      {
+        "id": "agenda-03-03",
+        "sortOrder": 3,
+        "title": "Building visibility with small weekly actions",
+        "details": "Create a low-pressure networking routine built around profile updates, comments, and reconnecting with warm contacts."
+      }
+    ],
+    "resources": [
+      {
+        "id": "resource-03-01",
+        "label": "LinkedIn headline examples",
+        "url": "https://program.atea-bttf.org/resources/linkedin-headline-examples",
+        "resourceType": "guide"
+      },
+      {
+        "id": "resource-03-02",
+        "label": "Networking action tracker",
+        "url": "https://program.atea-bttf.org/resources/networking-action-tracker",
+        "resourceType": "worksheet"
+      }
+    ]
+  },
+  {
+    "id": "session-04-business-analyst-and-product-roles",
+    "slug": "business-analyst-and-product-roles",
+    "title": "Business Analyst and Product Roles",
+    "summary": "Explore common expectations for analyst and product-adjacent roles, including stakeholder work, documentation, and delivery support.",
+    "description": "See how business analysis and product support roles map to transferable strengths such as communication, coordination, and structured problem solving.",
+    "plannedDate": "2026-10-01T18:30:00-04:00",
+    "plannedEndDate": "2026-10-01T20:00:00-04:00",
+    "speakerName": "Melissa Chen",
+    "speakerBio": "Senior business analyst who has coached career returners into BA, product coordinator, and operations roles.",
+    "meetingLink": "https://program.atea-bttf.org/sessions/business-analyst-and-product-roles",
+    "status": "planned",
+    "skillLevel": "beginner",
+    "agenda": [
+      {
+        "id": "agenda-04-01",
+        "sortOrder": 1,
+        "title": "What BAs and product coordinators do day to day",
+        "details": "Map meetings, backlog support, requirements gathering, and follow-up communication to common job descriptions."
+      },
+      {
+        "id": "agenda-04-02",
+        "sortOrder": 2,
+        "title": "Common tools, terms, and deliverables",
+        "details": "Review user stories, acceptance criteria, process maps, and stakeholder notes in plain language."
+      },
+      {
+        "id": "agenda-04-03",
+        "sortOrder": 3,
+        "title": "How to position transferable experience",
+        "details": "Identify examples from prior work that show facilitation, analysis, documentation, and delivery support."
+      }
+    ],
+    "resources": [
+      {
+        "id": "resource-04-01",
+        "label": "BA terminology cheat sheet",
+        "url": "https://program.atea-bttf.org/resources/ba-terminology-cheat-sheet",
+        "resourceType": "guide"
+      },
+      {
+        "id": "resource-04-02",
+        "label": "Sample user story pack",
+        "url": "https://program.atea-bttf.org/resources/sample-user-story-pack",
+        "resourceType": "template"
+      }
+    ]
+  },
+  {
+    "id": "session-05-qa-and-testing-careers",
+    "slug": "qa-and-testing-careers",
+    "title": "QA and Testing Careers",
+    "summary": "Understand manual QA, test case design, bug reporting, and how testing roles can be a strong re-entry path into IT.",
+    "description": "Practice the language of quality assurance and learn how structured testing work can provide a credible, lower-barrier path back into tech.",
+    "plannedDate": "2026-10-08T18:30:00-04:00",
+    "plannedEndDate": "2026-10-08T20:00:00-04:00",
+    "speakerName": "Renee Foster",
+    "speakerBio": "QA lead and test manager with experience mentoring first-time testers and professionals returning to software delivery teams.",
+    "meetingLink": "https://program.atea-bttf.org/sessions/qa-and-testing-careers",
+    "status": "planned",
+    "skillLevel": "beginner",
+    "agenda": [
+      {
+        "id": "agenda-05-01",
+        "sortOrder": 1,
+        "title": "Core QA responsibilities and workflows",
+        "details": "Walk through manual test execution, defect tracking, regression cycles, and collaboration with developers."
+      },
+      {
+        "id": "agenda-05-02",
+        "sortOrder": 2,
+        "title": "Writing test cases and reporting defects",
+        "details": "Practice clear, reproducible bug reports and simple test cases that demonstrate structured thinking."
+      },
+      {
+        "id": "agenda-05-03",
+        "sortOrder": 3,
+        "title": "Translating attention to detail into resume language",
+        "details": "Show how process discipline and quality checks from prior roles transfer into QA positioning."
+      }
+    ],
+    "resources": [
+      {
+        "id": "resource-05-01",
+        "label": "Bug report template",
+        "url": "https://program.atea-bttf.org/resources/bug-report-template",
+        "resourceType": "template"
+      },
+      {
+        "id": "resource-05-02",
+        "label": "Manual test case examples",
+        "url": "https://program.atea-bttf.org/resources/manual-test-case-examples",
+        "resourceType": "guide"
+      }
+    ]
+  },
+  {
+    "id": "session-06-data-reporting-and-power-bi",
+    "slug": "data-reporting-and-power-bi",
+    "title": "Data, Reporting, and Power BI",
+    "summary": "Learn the basics of reporting roles, dashboards, metrics, and how data storytelling appears in modern job descriptions.",
+    "description": "Demystify reporting careers by walking through KPIs, dashboard language, and small skill-building steps that make data roles feel approachable.",
+    "plannedDate": "2026-10-15T18:30:00-04:00",
+    "plannedEndDate": "2026-10-15T20:00:00-04:00",
+    "speakerName": "Tasha Williams",
+    "speakerBio": "Analytics manager and Power BI practitioner focused on helping nontraditional candidates break into reporting and operations analytics work.",
+    "meetingLink": "https://program.atea-bttf.org/sessions/data-reporting-and-power-bi",
+    "status": "planned",
+    "skillLevel": "beginner",
+    "agenda": [
+      {
+        "id": "agenda-06-01",
+        "sortOrder": 1,
+        "title": "Common data and reporting responsibilities",
+        "details": "Outline recurring reporting tasks, stakeholder requests, metric definitions, and dashboard maintenance."
+      },
+      {
+        "id": "agenda-06-02",
+        "sortOrder": 2,
+        "title": "Intro to dashboards, KPIs, and Power BI language",
+        "details": "Explain common reporting vocabulary so job postings feel more approachable and less technical."
+      },
+      {
+        "id": "agenda-06-03",
+        "sortOrder": 3,
+        "title": "First steps to bridge reporting skill gaps",
+        "details": "Recommend realistic starter projects and learning habits that support a reporting-focused job search."
+      }
+    ],
+    "resources": [
+      {
+        "id": "resource-06-01",
+        "label": "KPI glossary",
+        "url": "https://program.atea-bttf.org/resources/kpi-glossary",
+        "resourceType": "guide"
+      },
+      {
+        "id": "resource-06-02",
+        "label": "Starter dashboard brief",
+        "url": "https://program.atea-bttf.org/resources/starter-dashboard-brief",
+        "resourceType": "worksheet"
+      }
+    ]
+  },
+  {
+    "id": "session-07-cloud-and-devops-fundamentals",
+    "slug": "cloud-and-devops-fundamentals",
+    "title": "Cloud and DevOps Fundamentals",
+    "summary": "Get comfortable with common cloud and deployment terms that appear in many current IT job postings.",
+    "description": "Build confidence with cloud vocabulary, release pipelines, and realistic ways to show beginner exposure without overselling experience.",
+    "plannedDate": "2026-10-22T18:30:00-04:00",
+    "plannedEndDate": "2026-10-22T20:00:00-04:00",
+    "speakerName": "Jordan Lee",
+    "speakerBio": "Cloud engineer and DevOps educator who designs beginner-friendly learning plans for early-career and returning professionals.",
+    "meetingLink": "https://program.atea-bttf.org/sessions/cloud-and-devops-fundamentals",
+    "status": "planned",
+    "skillLevel": "beginner",
+    "agenda": [
+      {
+        "id": "agenda-07-01",
+        "sortOrder": 1,
+        "title": "Cloud platforms and core concepts",
+        "details": "Cover environments, storage, compute, and identity in beginner-friendly language tied to everyday IT work."
+      },
+      {
+        "id": "agenda-07-02",
+        "sortOrder": 2,
+        "title": "CI/CD, environments, and release basics",
+        "details": "Demystify pipelines, deployments, testing environments, and why these terms appear across many roles."
+      },
+      {
+        "id": "agenda-07-03",
+        "sortOrder": 3,
+        "title": "How to show beginner exposure credibly",
+        "details": "Discuss labs, coursework, and supporting examples that show curiosity without overstating expertise."
+      }
+    ],
+    "resources": [
+      {
+        "id": "resource-07-01",
+        "label": "Cloud basics study map",
+        "url": "https://program.atea-bttf.org/resources/cloud-basics-study-map",
+        "resourceType": "guide"
+      },
+      {
+        "id": "resource-07-02",
+        "label": "Release pipeline glossary",
+        "url": "https://program.atea-bttf.org/resources/release-pipeline-glossary",
+        "resourceType": "guide"
+      }
+    ]
+  },
+  {
+    "id": "session-08-interview-preparation-and-next-steps",
+    "slug": "interview-preparation-and-next-steps",
+    "title": "Interview Preparation and Next Steps",
+    "summary": "Practice clearer interview answers, build confidence, and leave with a concrete plan for the next 30 days.",
+    "description": "Close the series with mock interview practice, stronger storytelling, and a personal action plan for applications, networking, and follow-up learning.",
+    "plannedDate": "2026-10-29T18:30:00-04:00",
+    "plannedEndDate": "2026-10-29T20:00:00-04:00",
+    "speakerName": "Amina Okafor",
+    "speakerBio": "Career returnship mentor and former IT program manager focused on helping women re-enter technology roles after a break.",
+    "meetingLink": "https://program.atea-bttf.org/sessions/interview-preparation-and-next-steps",
+    "status": "planned",
+    "skillLevel": "beginner",
+    "agenda": [
+      {
+        "id": "agenda-08-01",
+        "sortOrder": 1,
+        "title": "Common return-to-work interview questions",
+        "details": "Practice responses to questions about career breaks, readiness, and motivations for returning now."
+      },
+      {
+        "id": "agenda-08-02",
+        "sortOrder": 2,
+        "title": "Structuring answers with confidence",
+        "details": "Use simple storytelling frameworks to give concise, evidence-based answers in interviews."
+      },
+      {
+        "id": "agenda-08-03",
+        "sortOrder": 3,
+        "title": "Personal next-step plan after the program",
+        "details": "Leave with a 30-day action plan covering applications, networking, and continued skill-building."
+      }
+    ],
+    "resources": [
+      {
+        "id": "resource-08-01",
+        "label": "Interview story bank template",
+        "url": "https://program.atea-bttf.org/resources/interview-story-bank-template",
+        "resourceType": "template"
+      },
+      {
+        "id": "resource-08-02",
+        "label": "30-day job search plan",
+        "url": "https://program.atea-bttf.org/resources/30-day-job-search-plan",
+        "resourceType": "worksheet"
+      }
+    ]
+  }
+]

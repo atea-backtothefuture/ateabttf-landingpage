@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { useSessions } from "../hooks/useSessions";
+import { toOpportunityCard } from "../lib/session-utils";
 import { featuredOpportunities } from "../data/opportunities";
 import { OpportunityCard } from "../ui/OpportunityCard";
 import { SectionCard } from "../ui/SectionCard";
@@ -10,6 +12,9 @@ const stats = [
 ];
 
 export function HomePage() {
+  const { sessions, error } = useSessions();
+  const featuredCards = sessions.length > 0 ? sessions.slice(0, 3).map(toOpportunityCard) : featuredOpportunities;
+
   return (
     <div className="space-y-8">
       <section className="grid gap-6 rounded-[2rem] border border-white/10 bg-slate-900/75 p-8 shadow-soft lg:grid-cols-[1.4fr,0.9fr]">
@@ -29,6 +34,9 @@ export function HomePage() {
             <Link className="rounded-full border border-white/15 px-5 py-3 font-semibold text-white" to="/resume-review">
               Try resume review
             </Link>
+            <Link className="rounded-full border border-white/15 px-5 py-3 font-semibold text-white" to="/volunteer">
+              Become a volunteer
+            </Link>
           </div>
         </div>
 
@@ -47,8 +55,9 @@ export function HomePage() {
         title="Start with the first three topic cards in the 8-session journey"
         description="These cards are seeded from local content now and can later be hydrated from D1 through the Cloudflare Worker."
       >
+        {error ? <p className="mb-4 text-sm text-amber-200">{error}</p> : null}
         <div className="grid gap-5 lg:grid-cols-3">
-          {featuredOpportunities.map((opportunity) => (
+          {featuredCards.map((opportunity) => (
             <OpportunityCard key={opportunity.id} opportunity={opportunity} />
           ))}
         </div>

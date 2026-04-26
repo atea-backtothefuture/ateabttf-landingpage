@@ -1,3 +1,5 @@
+export type OpportunityStatus = "Planned" | "Open" | "Completed";
+
 export type Opportunity = {
   id: string;
   title: string;
@@ -7,7 +9,11 @@ export type Opportunity = {
   summary: string;
   agenda: string[];
   plannedDate: string;
-  status: "Planned" | "Open" | "Completed";
+  status: OpportunityStatus;
+  speaker: string;
+  audience: string;
+  outcomes: string[];
+  prep: string[];
 };
 
 export const featuredOpportunities: Opportunity[] = [
@@ -24,7 +30,19 @@ export const featuredOpportunities: Opportunity[] = [
       "Personal action plan for the next 8 sessions"
     ],
     plannedDate: "May 12, 2026",
-    status: "Open"
+    status: "Open",
+    speaker: "Nadia K., ATTA program mentor",
+    audience: "Women restarting careers in QA, support, analyst, and cloud pathways",
+    outcomes: [
+      "A personal return-to-work goal for the cohort",
+      "A confidence-building routine for the next 30 days",
+      "A short list of target roles to explore"
+    ],
+    prep: [
+      "Bring one recent job post that feels interesting",
+      "List three strengths from past experience",
+      "Be ready to share your career-break story if comfortable"
+    ]
   },
   {
     id: "resume-refresh",
@@ -39,7 +57,19 @@ export const featuredOpportunities: Opportunity[] = [
       "Tailoring for analyst, QA, cloud, and support roles"
     ],
     plannedDate: "May 19, 2026",
-    status: "Planned"
+    status: "Planned",
+    speaker: "Priya S., senior technical recruiter",
+    audience: "Participants updating resumes for entry and mid-level IT opportunities",
+    outcomes: [
+      "A cleaner resume layout for ATS parsing",
+      "Three rewritten bullets focused on impact",
+      "A checklist for tailoring resumes to job descriptions"
+    ],
+    prep: [
+      "Upload your current resume draft",
+      "Highlight one role you want to target this quarter",
+      "Collect two accomplishments you want to feature"
+    ]
   },
   {
     id: "cloud-devops",
@@ -54,6 +84,22 @@ export const featuredOpportunities: Opportunity[] = [
       "How to position beginner familiarity on a resume"
     ],
     plannedDate: "June 2, 2026",
-    status: "Planned"
+    status: "Planned",
+    speaker: "Melissa R., cloud platform engineer",
+    audience: "Participants building technical vocabulary for modern infrastructure teams",
+    outcomes: [
+      "A beginner map of cloud and DevOps terms",
+      "Two starter projects to build confidence",
+      "Language you can use in interviews and on resumes"
+    ],
+    prep: [
+      "Review basic Git concepts",
+      "Create a free cloud sandbox account if possible",
+      "Write down unfamiliar terms from recent job descriptions"
+    ]
   }
 ];
+
+export function getOpportunityById(id: string) {
+  return featuredOpportunities.find((opportunity) => opportunity.id === id);
+}

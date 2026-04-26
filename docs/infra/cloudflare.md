@@ -1,41 +1,148 @@
-# Cloudflare deployment notes
+# Cloudflare setup checklist
 
-This repository is scaffolded for a two-app Cloudflare setup:
+This repo currently deploys:
 
-- `apps/web`: Cloudflare Pages frontend
-- `apps/api`: Cloudflare Worker API backed by D1
+- `apps/web` as a Cloudflare Pages project
+- `apps/api` as a Cloudflare Worker
+- `apps/api/migrations/*` into one Cloudflare D1 database
 
-## Files
+This repo does not currently bind R2, KV, Durable Objects, or Queues in Wrangler or GitHub Actions, so you do not need to create those yet for this scaffold.
 
-- `apps/web/wrangler.jsonc`: Pages config and public runtime vars
-- `apps/api/wrangler.jsonc`: Worker config, route placeholder, and D1 binding
-- `apps/api/migrations/0001_initial_schema.sql`: initial schema for sessions, volunteer submissions, reviews, and video recommendations
-- `.github/workflows/deploy-cloudflare.yml`: path-aware deploy pipeline
+## Create these Cloudflare resources
 
-## Required GitHub secrets
+### 1) D1 database
+
+Create one D1 database for the API.
+
+- Simplest prod-only name: `atta-bttf-volunteering`
+- Suggested split names:
+  - dev: `atta-bttf-volunteering-dev`
+  - prod: `atta-bttf-volunteering-prod`
+
+You must provide back:
+
+- D1 `atta-bttf-volunteering-dev`
+- D1 `afae21d2-9d57-4e79-b5f5-d9dbd3bc570e`
+
+## 2) Worker and API hostname
+
+Create or reserve the Worker deployment for the API.
+
+- Simplest prod-only Worker name: `atta-bttf-api`
+- Suggested split names:
+  - dev: `atta-bttf-api-dev`
+  - prod: `atta-bttf-api-prod`
+
+If you want a custom API hostname, create the DNS/route target in the Cloudflare zone.
+
+- Suggested dev API hostname: `api-dev.<your-domain>`
+- Suggested prod API hostname: `api.<your-domain>`
+
+You must provide back:
+
+- Worker `name`
+- API route `pattern` (example: `api.example.com/*`)
+- API `zone_name` (example: `example.com`)
+- Final API base URL used by the web app (example: `https://api.example.com`)
+
+## 3) Pages project for the frontend
+
+Create one Pages project for the web app.
+
+- Simplest prod-only project name: `atta-bttf-web`
+- Suggested split names:
+  - dev: `atta-bttf-web-dev`
+  - prod: `atta-bttf-web-prod`
+
+You can use the default `*.pages.dev` hostname or attach a custom domain.
+
+- Suggested dev hostname: `atta-bttf-web-dev.pages.dev` or `dev.<your-domain>`
+- Suggested prod hostname: `atta-bttf-web.pages.dev` or `<your-domain>`
+
+You must provide back:
+
+- Pages project name
+- Pages hostname actually serving the site
+- Custom frontend domain, if you attach one
+
+## 4) Cloudflare account access for GitHub Actions
+
+Add these GitHub repository secrets before enabling deploys:
 
 - `CLOUDFLARE_API_TOKEN`
 - `CLOUDFLARE_ACCOUNT_ID`
 
-Keep secrets out of the repository. The `database_id`, route hostname, zone name, and Pages project values are placeholders until you create the real Cloudflare resources.
+Recommended API token scope for this repo:
 
-## First-time setup
+- Workers Scripts / Edit
+- Workers Routes / Edit
+- D1 / Edit
+- Pages / Edit
+- Account scope limited to the target Cloudflare account
+- Zone scope limited to the zone that serves the API hostname, if you use a custom domain
 
-1. Create the D1 database and replace `REPLACE_WITH_D1_DATABASE_ID` in `apps/api/wrangler.jsonc`.
-2. Create the API route and replace `api.example.com` and `example.com` in `apps/api/wrangler.jsonc`.
-3. Confirm the web origin in `CORS_ORIGIN` matches your deployed Pages hostname or custom domain.
-4. Create the Pages project `atta-bttf-web`, or update the project name in both `apps/web/wrangler.jsonc` and `.github/workflows/deploy-cloudflare.yml`.
-5. Add the GitHub secrets before merging deployment changes into `main`.
+You must provide back:
 
-## Local development
+- `CLOUDFLARE_ACCOUNT_ID`
+- Confirmation that `CLOUDFLARE_API_TOKEN` is created and stored in GitHub
 
-- Copy `apps/api/.dev.vars.example` to `apps/api/.dev.vars`
-- Copy `apps/web/.dev.vars.example` to `apps/web/.dev.vars`
-- Run `pnpm dev:web` from the repo root for the frontend
-- Run `pnpm dev:api` from the repo root for the Worker
+## Config values this repo needs
 
-## Recommended deployment pattern
+Send back every value in this checklist so the remaining placeholders can be replaced safely:
 
-- Let Codex update code, config, and workflow files
-- Let GitHub Actions handle automatic deployments after review
-- Use preview deploys or manual `wrangler` deploys only when you explicitly want them
+- `CLOUDFLARE_ACCOUNT_ID`
+- `CLOUDFLARE_API_TOKEN` added in GitHub secrets
+- API Worker name
+- D1 database name
+- D1 database ID
+- Pages project name
+- API route pattern
+- API zone name
+- Web/API production base URL for `VITE_PUBLIC_API_BASE_URL`
+- Web origin for API `CORS_ORIGIN`
+- Frontend hostname or custom domain
+
+## Exact placeholders currently waiting on your values
+
+These files are the ones that need the values above:
+
+- `apps/api/wrangler.jsonc`
+  - `name`
+  - `routes[0].pattern`
+  - `routes[0].zone_name`
+  - `vars.CORS_ORIGIN`
+  - `d1_databases[0].database_name`
+  - `d1_databases[0].database_id`
+- `apps/web/wrangler.jsonc`
+  - `name`
+  - `vars.PUBLIC_API_BASE_URL`
+- `apps/web/.env.local` or Cloudflare Pages build variables
+  - `VITE_PUBLIC_API_BASE_URL`
+- `.github/workflows/deploy-cloudflare.yml`
+  - D1 migration database name in `wrangler d1 migrations apply ...`
+  - Pages project name in `pages deploy ... --project-name ...`
+
+## Practical recommendation for this repo
+
+If you only want one production environment right now, create exactly these names to minimize follow-up edits:
+
+- D1 database: `atta-bttf-volunteering`
+- Worker: `atta-bttf-api`
+- Pages project: `atta-bttf-web`
+- API hostname: `api.<your-domain>`
+
+Then provide back:
+
+- your root domain / zone name
+- your API hostname
+- your frontend hostname
+- your D1 database ID
+- your Cloudflare account ID
+
+## Local and build-time frontend config
+
+The React app currently reads `VITE_PUBLIC_API_BASE_URL` at build time.
+
+- For local development, copy `apps/web/.env.example` to `apps/web/.env.local`
+- For Cloudflare Pages builds, add `VITE_PUBLIC_API_BASE_URL` as a Pages environment variable
+- Recommended production value: `https://api.<your-domain>`
