@@ -7,6 +7,6 @@
     "enabled": true
   },
   "vars": {
-    "VITE_PUBLIC_API_BASE_URL": "https://api.example.com"
+    "VITE_PUBLIC_API_BASE_URL": "https://atta-bttf-api.ateabacktothefuture.workers.dev"
   }
 }
