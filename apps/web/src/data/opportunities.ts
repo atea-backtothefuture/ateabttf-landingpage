@@ -13,7 +13,7 @@ export type Opportunity = {
   speaker: string;
   audience: string;
   outcomes: string[];
-  prep: string[];
+  prep: readonly string[];
 };
 
 export const featuredOpportunities: Opportunity[] = [
