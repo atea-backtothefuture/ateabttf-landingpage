@@ -7,12 +7,6 @@
   "observability": {
     "enabled": true
   },
-  "routes": [
-    {
-      "pattern": "atta-bttf-api.ateabacktothefuture.workers.dev/*",
-      "zone_name": "workers.dev"
-    }
-  ],
   "vars": {
     "APP_ENV": "production",
     "CORS_ORIGIN": "https://atta-bttf-web.pages.dev"
